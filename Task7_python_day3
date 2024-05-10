@@ -1,0 +1,15 @@
+import time
+
+def create_timestamp_file():
+    # Get the current timestamp
+    current_time = time.strftime("%Y-%m-%d_%H-%M-%S")
+    
+    # Create a file with the current timestamp
+    file_name = f"{current_time}.txt"
+    with open(file_name, 'w') as file:
+        # Write the current timestamp into the file
+        file.write(current_time)
+    
+    print(f"File '{file_name}' created with the content: {current_time}")
+
+create_timestamp_file()
